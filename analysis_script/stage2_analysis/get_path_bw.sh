@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# baseDir="/home/dell/sjw/lb/simulator/output/aps-v2-mix-c10_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
-# baseDir_rps="/home/dell/sjw/lb/simulator/output/rps-mix-b306_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
+# baseDir="/home/dcn1/fxb/simulator/output/aps-v2-mix-c10_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
+# baseDir_rps="/home/dcn1/fxb/simulator/output/rps-mix-b306_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
 
 cd $baseDir && 
 # 提取 <src,dst> 路径信息 -> pathID2Switch
@@ -11,7 +11,7 @@ else
     grep "APS_PATH_SWITCHID" output.log | awk -F ':| |,' '{print $9,$10,$11,$12,$13,$14,$6}' > pathID2Switch 
 fi
 
-cd /home/dell/sjw/lb/simulator/analysis_script &&
+cd /home/dcn1/fxb/simulator/analysis_script &&
 sed -i "s|case_file = .*|case_file = \"$baseDir\"|" topo_parser.py &&
 # 解析 <src,dst> 路径交换机出端口 -> pathID2Switch_with_ports.txt
 python3 topo_parser.py &&

@@ -39,7 +39,7 @@ from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 # Default configuration
 # =========================
 
-DEFAULT_INPUT_CSV = "/home/dell/sjw/lb/simulator/output/1all_figures/stage3/sym/sym_speedup_data.csv"
+DEFAULT_INPUT_CSV = "/home/dcn1/fxb/simulator/output/1all_figures/stage3/sym/sym_speedup_data.csv"
 DEFAULT_BASELINE_ALG = "ecmp"
 
 DEFAULT_OUTPUT_PNG = "bubble_speedup_heatmap_paper.png"

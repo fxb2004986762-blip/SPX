@@ -279,16 +279,16 @@ def main():
     #     data_files = args
 
     algo_files = {
-        "aps-v2-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-eq-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-eq/aps-v2-eq-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-eu-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-eu/aps-v2-eu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-q-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-q/aps-v2-q-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-qu-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-u-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        # "aps-v2-u-f306": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+        "aps-v2-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-eq-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-eq/aps-v2-eq-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-eu-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-eu/aps-v2-eu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-q-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-q/aps-v2-q-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-qu-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-u-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        # "aps-v2-u-f306": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     }
 
-    output_dir = "/home/dell/sjw/lb/simulator/output/1all_figures"
+    output_dir = "/home/dcn1/fxb/simulator/output/1all_figures"
     # data_name = "acc_path_selected_by_bw.txt" # "acc_path_selected_by_bw.txt" "acc_path_selected_by_qlen.txt"
     # compare_type = "threshold"
     data_name = "acc_path_selected_by_qlen.txt" # "acc_path_selected_by_bw.txt" "acc_path_selected_by_qlen.txt"

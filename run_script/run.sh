@@ -153,7 +153,7 @@ function usage {
 ########## Main Script ##########
 ### Default Config ###
 # SimAI path
-simdir="/home/dell/sjw/lb/simulator"
+simdir="/home/dcn1/fxb/simulator"
 
 # Tag {lb_mode}_{cc_mode} ecmp_dcqcn aps-v2_dcqcn rps_dcqcn reps_dcqcn
 # tag="reps_crc32_dcqcn"

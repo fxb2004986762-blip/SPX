@@ -159,7 +159,7 @@ def traverse_class_with_handler(test_class_file: str, log_file: str = None, hand
     """
     config_list = get_child_dir_name(test_class_file)
     if log_file is None:
-        log_file = "/home/dell/sjw/lb/simulator/output/tmp.log"
+        log_file = "/home/dcn1/fxb/simulator/output/tmp.log"
     with open(log_file, "w") as log_f:
         for config in config_list:
             config_path = os.path.join(test_class_file, config)
@@ -184,8 +184,8 @@ def traverse_class_with_handler(test_class_file: str, log_file: str = None, hand
 
 if __name__ == "__main__":
     
-    test_class_file = "/home/dell/sjw/lb/simulator/output/7int-mix-class"
-    tmp_log_file = "/home/dell/sjw/lb/simulator/output/tmp.log"
+    test_class_file = "/home/dcn1/fxb/simulator/output/7int-mix-class"
+    tmp_log_file = "/home/dcn1/fxb/simulator/output/tmp.log"
 
     handler_list = [get_jct, get_fct]
     traverse_class_with_handler(test_class_file, tmp_log_file, handlers=handler_list)

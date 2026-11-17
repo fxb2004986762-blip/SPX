@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 
-TASK_FILE = "/home/dell/sjw/lb/simulator/output/work.list"          # 每行一条完整命令
+TASK_FILE = "/home/dcn1/fxb/simulator/output/work.list"          # 每行一条完整命令
 MAX_PARALLEL =  4               # 最大并发数
 POLL_INTERVAL = 5                # 轮询间隔（秒）
 
@@ -23,7 +23,7 @@ FINISH_FLOW_ALLTOALL = 896 # 7168 (1024GPU), 896 (128GPU)
 
 ALLREDUCE_NAME = "allreduce"
 FINISH_FLOW_ALLREDUCE = 6144
-SCHEDULER_LOG = "/home/dell/sjw/lb/simulator/output/scheduler_status.log"
+SCHEDULER_LOG = "/home/dcn1/fxb/simulator/output/scheduler_status.log"
 
 def log(msg: str):
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -230,7 +230,7 @@ def main():
     log(f"Fail    : {fail_count}")
 
     summary_msg = f"All tasks completed: {success_count} success, {fail_count} fail"
-    subprocess.run(["python3", "/home/dell/sjw/lb/simulator/run_script/notify.py", "--path", summary_msg])
+    subprocess.run(["python3", "/home/dcn1/fxb/simulator/run_script/notify.py", "--path", summary_msg])
 
     if fail_count > 0:
         log("Failed tasks:")

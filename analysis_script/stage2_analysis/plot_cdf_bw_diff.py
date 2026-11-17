@@ -240,13 +240,13 @@ def main():
     #     print("示例: python plot_cdf.py data.txt cdf_output.pdf")
     #     sys.exit(1)
     algo_files = {
-        "aps-v2-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f4": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f8": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f16": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f32": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f32_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f64": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-f306": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+        "aps-v2-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f4": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f8": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f16": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f32": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f32_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f64": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-f306": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     }
     for case, data_dir in algo_files.items():
         input_file = data_dir + '/acc_path_selected_by_bw.txt'

@@ -90,5 +90,5 @@ if __name__ == "__main__":
 #     plt.xlabel("Time(ms)")
 #     plt.ylabel("QueueLength(KB)")
 #     plt.legend(lables)
-#     plt.savefig("/home/xuemo.lc/AliLMN-Sim/figs/" + fig_name)
+#     plt.savefig("/home/dcn1/fxb/simulator/ns-3-alibabacloud/simulation/monitor_output/figs/" + fig_name)
 #     plt.show()

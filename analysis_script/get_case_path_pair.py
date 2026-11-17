@@ -4,7 +4,7 @@ import sys
 # =========================
 # 输出文件配置
 # =========================
-WRITE_OUTPUT_FILE = "/home/dell/sjw/lb/simulator/analysis_script/configs/result_path.py"
+WRITE_OUTPUT_FILE = "/home/dcn1/fxb/simulator/analysis_script/configs/result_path.py"
 
 # 是否直接写入文件
 WRITE_DIRECTLY = True

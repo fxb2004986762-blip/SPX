@@ -17,8 +17,8 @@ class SimAIConfig:
 
     # 文件路径（会根据 tag 自动生成）
     FLOW_FILE: str = ""
-    FLOW_FILE: str = "/home/dell/sjw/lb/simulator/custom_trace/trace_test.txt"
-    # FLOW_FILE: str = "/home/dell/sjw/lb/simulator/custom_trace/alltoall_128g_1MB.txt"
+    FLOW_FILE: str = "/home/dcn1/fxb/simulator/custom_trace/trace_test.txt"
+    # FLOW_FILE: str = "/home/dcn1/fxb/simulator/custom_trace/alltoall_128g_1MB.txt"
     TRACE_FILE: str = ""
     TRACE_OUTPUT_FILE: str = ""
     FCT_OUTPUT_FILE: str = ""
@@ -115,7 +115,7 @@ class SimAIConfig:
 
     # 链路控制
     LINK_DOWN: str = "0 0 0" # "100 192 224"
-    SWITCH_FAILURE: str = "/home/dell/sjw/lb/simulator/run_script/switch_failure.cfg"
+    SWITCH_FAILURE: str = "/home/dcn1/fxb/simulator/run_script/switch_failure.cfg"
 
     # trace 控制
     ENABLE_TRACE: int = 1

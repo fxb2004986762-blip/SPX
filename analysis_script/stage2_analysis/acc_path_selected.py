@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-basePath = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+basePath = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
 selectedPath = basePath + "/aps_selected.txt"
 pathQlen = basePath + "/pathQlen.txt"
 pathBw = basePath + "/pathBw.txt"

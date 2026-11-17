@@ -7,7 +7,7 @@ import os
 # =========================
 # 文件路径
 # =========================
-basePath = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+basePath = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
 PATH_FILE = basePath + "/" + "pathID2Switch_with_ports.txt"
 BW_FILE = basePath + "/" + "bw.txt"
 pathBw_file = basePath + "/" + "pathBw.txt"

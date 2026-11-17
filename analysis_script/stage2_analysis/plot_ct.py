@@ -307,27 +307,27 @@ if __name__ == "__main__":
 
     # 非对称拓扑对比
     # algo_files = {
-    #     "aps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/aps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "aps-v2": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/aps-v2-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "rps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/rps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "reps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/reps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "ecmp": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "flowbender": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/flowbender-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-    #     "letflow": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/letflow-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "aps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/aps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "aps-v2": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/aps-v2-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "rps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/rps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "reps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/reps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "ecmp": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "flowbender": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/flowbender-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+    #     "letflow": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/letflow-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
     # }
 
     # 对称拓扑对比
     algo_files = {
-        "aps": "/home/dell/sjw/lb/simulator/output/3lb-class/aps/All-to-All/aps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        "aps-v2": "/home/dell/sjw/lb/simulator/output/3lb-class/aps-v2/All-to-All/aps-v2_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        "rps": "/home/dell/sjw/lb/simulator/output/3lb-class/rps/All-to-All/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        # "reps": "/home/dell/sjw/lb/simulator/output/3lb-class/reps/All-to-All/reps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        "ecmp": "/home/dell/sjw/lb/simulator/output/3lb-class/ecmp/All-to-All/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        "flowbender": "/home/dell/sjw/lb/simulator/output/3lb-class/flowbender/All-to-All/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
-        "letflow": "/home/dell/sjw/lb/simulator/output/3lb-class/letflow/All-to-All/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "aps": "/home/dcn1/fxb/simulator/output/3lb-class/aps/All-to-All/aps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "aps-v2": "/home/dcn1/fxb/simulator/output/3lb-class/aps-v2/All-to-All/aps-v2_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "rps": "/home/dcn1/fxb/simulator/output/3lb-class/rps/All-to-All/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        # "reps": "/home/dcn1/fxb/simulator/output/3lb-class/reps/All-to-All/reps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "ecmp": "/home/dcn1/fxb/simulator/output/3lb-class/ecmp/All-to-All/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "flowbender": "/home/dcn1/fxb/simulator/output/3lb-class/flowbender/All-to-All/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
+        "letflow": "/home/dcn1/fxb/simulator/output/3lb-class/letflow/All-to-All/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_16M",
     }
 
-    out_dir = "/home/dell/sjw/lb/simulator/output/1all_figures/aps-v2_vs._baseline/jct"
+    out_dir = "/home/dcn1/fxb/simulator/output/1all_figures/aps-v2_vs._baseline/jct"
 
     algos = []
     data_files_fct = []
@@ -342,12 +342,12 @@ if __name__ == "__main__":
     out_pdf_fct_avg_file = out_dir + "/fct_avg_baseline_all2all_1MBpf.pdf"
     out_pdf_fct_p99_file = out_dir + "/fct_p99_baseline_all2all_1MBpf.pdf"
     out_pdf_fct_p95_file = out_dir + "/fct_p95_baseline_all2all_1MBpf.pdf"
-    # out_pdf_jct_file = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-jct.pdf"
-    # out_pdf_fct_avg_file = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-fct_avg.pdf"
-    # out_pdf_fct_p99_file = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-fct_p99.pdf"
-    # out_pdf_jct_file = "/home/dell/sjw/lb/simulator/output/6int-class/freq_compare/jct/f1-jct.pdf"
-    # out_pdf_fct_avg_file = "/home/dell/sjw/lb/simulator/output/6int-class/freq_compare/fct_avg/f1-fct_avg.pdf"
-    # out_pdf_fct_p99_file = "/home/dell/sjw/lb/simulator/output/6int-class/freq_compare/fct_p99/f1-fct_p99.pdf"
+    # out_pdf_jct_file = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-jct.pdf"
+    # out_pdf_fct_avg_file = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-fct_avg.pdf"
+    # out_pdf_fct_p99_file = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-fct_p99.pdf"
+    # out_pdf_jct_file = "/home/dcn1/fxb/simulator/output/6int-class/freq_compare/jct/f1-jct.pdf"
+    # out_pdf_fct_avg_file = "/home/dcn1/fxb/simulator/output/6int-class/freq_compare/fct_avg/f1-fct_avg.pdf"
+    # out_pdf_fct_p99_file = "/home/dcn1/fxb/simulator/output/6int-class/freq_compare/fct_p99/f1-fct_p99.pdf"
 
     if "jct" in plot_type:
         plot_results_jct(data_files_fct, algos, out_pdf_jct_file)

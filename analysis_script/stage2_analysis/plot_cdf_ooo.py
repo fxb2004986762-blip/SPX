@@ -173,12 +173,12 @@ def plot_cdf(file_with_label, output_file):
 if __name__ == '__main__':
 
     cases = {
-        "aps-v2-u-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-u-f4": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "aps-v2-u-f64": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+        "aps-v2-u-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-u-f4": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2-u-f64": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     }
         
-    output_dir = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+    output_dir = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u/aps-v2-u-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     if len(cases) == 1:
         output_dir = list(cases.values())[0]
     output_file = output_dir + "/ooo_cdf.pdf"

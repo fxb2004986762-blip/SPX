@@ -31,7 +31,7 @@
 using namespace std;
 
 /* Log file path*/
-inline std::string debug_log_file = "/home/dell/sjw/lb/simulator/output/simulation/debug.log";
+inline std::string debug_log_file = "/home/dcn1/fxb/simulator/output/simulation/debug.log";
 inline FILE *debug_log = fopen(debug_log_file.c_str(), "w");
 
 

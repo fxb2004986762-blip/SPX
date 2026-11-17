@@ -206,7 +206,7 @@ def plot_cdf(file_with_label, output_file):
 if __name__ == '__main__':
 
     cases = {
-        "rps": "/home/dell/sjw/lb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "rps": "/home/dcn1/fxb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
     }
     dict_key = list(cases.keys())
     
@@ -216,7 +216,7 @@ if __name__ == '__main__':
         fct_data = data_dir + '/fct.txt'
         cases_list.append((fct_data, label))
 
-    # output_dir = "/home/dell/sjw/lb/simulator/output/1all_figures"
+    # output_dir = "/home/dcn1/fxb/simulator/output/1all_figures"
     # output_file = output_dir + "/fattree_AllReduce_fct_slowdown_cdf.pdf"
     output_dir = cases[dict_key[0]]
     output_file = output_dir + "/fct_slowdown_cdf.pdf"

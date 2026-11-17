@@ -48,9 +48,9 @@ from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 # ============================================================
 
 CONFIG_LIST = {
-    "0": "/home/dell/sjw/lb/simulator/output/1all_figures/stage3/jct_summary/asy",
-    "1": "/home/dell/sjw/lb/simulator/output/1all_figures/stage3/jct_summary/failure",
-    "2": "/home/dell/sjw/lb/simulator/output/1all_figures/stage3/jct_summary/sym",
+    "0": "/home/dcn1/fxb/simulator/output/1all_figures/stage3/jct_summary/asy",
+    "1": "/home/dcn1/fxb/simulator/output/1all_figures/stage3/jct_summary/failure",
+    "2": "/home/dcn1/fxb/simulator/output/1all_figures/stage3/jct_summary/sym",
     # "single_case": "/path/to/dir_c",
 }
 

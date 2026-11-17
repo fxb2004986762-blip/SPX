@@ -9,13 +9,13 @@ import subprocess
 
 # python3 generate_confs.py --plan experiment_plan.csv
 
-simulator_dir = "/home/dell/sjw/lb/simulator"
-base_running_dir = "/home/dell/sjw/lb/simulator/output"
-topology_base_dir = "/home/dell/sjw/lb/simulator/topology"
-workload_base_dir = "/home/dell/sjw/lb/simulator/workload"
-baseline_file = "/home/dell/sjw/lb/simulator/run_script/base_params.yml"
+simulator_dir = "/home/dcn1/fxb/simulator"
+base_running_dir = "/home/dcn1/fxb/simulator/output"
+topology_base_dir = "/home/dcn1/fxb/simulator/topology"
+workload_base_dir = "/home/dcn1/fxb/simulator/workload"
+baseline_file = "/home/dcn1/fxb/simulator/run_script/base_params.yml"
 # 默认输出目录
-output_dir = "/home/dell/sjw/lb/simulator/output"
+output_dir = "/home/dcn1/fxb/simulator/output"
 worklist_dir = output_dir + "/work.list"
 def load_baseline(path: Path) -> Dict[str, object]:
     with open(path, "r", encoding="utf-8") as f:

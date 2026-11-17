@@ -1,6 +1,6 @@
 #!/bin/bash
 
-baseDir_aps="/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+baseDir_aps="/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
 # export STEP=1
 export baseDir=$baseDir_aps
 # 获取路径队列长度
@@ -37,7 +37,7 @@ if [ ! -d "$baseDir_aps" ]; then
     exit 1
 fi
 
-cd /home/dell/sjw/lb/simulator/analysis_script &&
+cd /home/dcn1/fxb/simulator/analysis_script &&
 path_qlen &&
 path_bw &&
 select_acc 

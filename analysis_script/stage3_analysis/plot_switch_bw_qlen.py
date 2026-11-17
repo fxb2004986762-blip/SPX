@@ -15,7 +15,7 @@ CONFIG_LIST = {
 
 
 # "test-1024GPU": {
-#     "0": "/home/dell/sjw/lb/simulator/output/12asy_topo/topology_type/spectrumx/allreduce/flowbender/flowbender_mprdma-SpectrumX_1024g_8gps_400Gbps_A100_asy-microAllReduce_1024g_2048M",
+#     "0": "/home/dcn1/fxb/simulator/output/12asy_topo/topology_type/spectrumx/allreduce/flowbender/flowbender_mprdma-SpectrumX_1024g_8gps_400Gbps_A100_asy-microAllReduce_1024g_2048M",
 # },
 
 

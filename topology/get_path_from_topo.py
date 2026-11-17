@@ -120,9 +120,9 @@ def format_output(src, dst, path, port_info):
 
 def main():
     # 读取拓扑文件 (修改为你的拓扑文件名)
-    topology_file = '/home/dell/sjw/lb/simulator/topology/SpectrumX_1024g_8gps_400Gbps_A100' 
-    topology_file = '/home/dell/sjw/lb/simulator/topology/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100'  
-    # topology_file = '/home/dell/sjw/lb/simulator/topology/fattree_k16_1024g_8gps_400Gbps_A100'  
+    topology_file = '/home/dcn1/fxb/simulator/topology/SpectrumX_1024g_8gps_400Gbps_A100' 
+    topology_file = '/home/dcn1/fxb/simulator/topology/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100'  
+    # topology_file = '/home/dcn1/fxb/simulator/topology/fattree_k16_1024g_8gps_400Gbps_A100'  
     
     print(f"正在解析拓扑: {topology_file.split('/')[-1]}")
     graph, num_hosts = parse_topology(topology_file)

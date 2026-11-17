@@ -57,7 +57,7 @@ python3 -m pip install numpy pandas matplotlib cycler
 `trace_analysis/` 还需要 GNU Make 和支持 C++11 的 `g++`：
 
 ```bash
-cd /home/dell/sjw/lb/simulator/analysis_script/trace_analysis
+cd /home/dcn1/fxb/simulator/analysis_script/trace_analysis
 make
 ```
 
@@ -103,7 +103,7 @@ CONFIG_LIST = {
 为了让 `configs` 包能够被正确导入，建议从 `analysis_script/` 目录运行顶层脚本，从项目根目录运行 stage 目录中的脚本：
 
 ```bash
-cd /home/dell/sjw/lb/simulator
+cd /home/dcn1/fxb/simulator
 python3 analysis_script/stage3_analysis/plot_cdf_fct.py
 ```
 
@@ -112,7 +112,7 @@ python3 analysis_script/stage3_analysis/plot_cdf_fct.py
 `get_case_path_pair.py` 会扫描实验目录，将结果写入 `configs/result_path.py`。最稳妥的用法是进入交互模式：
 
 ```bash
-cd /home/dell/sjw/lb/simulator/analysis_script
+cd /home/dcn1/fxb/simulator/analysis_script
 python3 get_case_path_pair.py
 ```
 
@@ -278,7 +278,7 @@ CONFIG_LIST = {
 3. 从项目根目录执行脚本。
 
 ```bash
-cd /home/dell/sjw/lb/simulator
+cd /home/dcn1/fxb/simulator
 python3 analysis_script/stage3_analysis/plot_cdf_fct.py
 ```
 
@@ -413,7 +413,7 @@ python3 analysis_script/stage2_analysis/conweave_plot_fct.py \
 ### 编译与运行
 
 ```bash
-cd /home/dell/sjw/lb/simulator/analysis_script/trace_analysis
+cd /home/dcn1/fxb/simulator/analysis_script/trace_analysis
 make
 ./trace_reader /path/to/trace_file
 ```
@@ -468,11 +468,11 @@ make
 ### 批量生成单实验 CDF/时序图
 
 ```bash
-cd /home/dell/sjw/lb/simulator/analysis_script
+cd /home/dcn1/fxb/simulator/analysis_script
 python3 get_case_path_pair.py
 python3 check_if_finish.py
 
-cd /home/dell/sjw/lb/simulator
+cd /home/dcn1/fxb/simulator
 python3 analysis_script/stage3_analysis/plot_cdf_fct.py
 python3 analysis_script/stage3_analysis/plot_cdf_ecn.py
 python3 analysis_script/stage3_analysis/plot_cdf_retrans.py

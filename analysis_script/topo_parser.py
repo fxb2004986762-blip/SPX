@@ -85,7 +85,7 @@ def enrich_paths_with_ports(path_file, switch_ports, output_file):
 # 3. Main
 # ==============================
 if __name__ == "__main__":
-    case_file = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+    case_file = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     topology_file = case_file + "/" + case_file.split("-")[-2]
     path_file = case_file + "/" + "pathID2Switch"
     output_file = case_file + "/" + "pathID2Switch_with_ports.txt"

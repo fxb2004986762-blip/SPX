@@ -47,7 +47,7 @@ CONFIG_LIST = {
     # },
 
     # "algo_files_1024GPU": {
-    #     "1": "/home/dell/sjw/lb/simulator/output/aps-v2_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_128M",
+    #     "1": "/home/dcn1/fxb/simulator/output/aps-v2_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_128M",
     # }
 }
 

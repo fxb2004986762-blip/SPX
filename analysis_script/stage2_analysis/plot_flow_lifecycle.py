@@ -154,9 +154,9 @@ def plot_flow_timeline(filename, src_id, dst_id, port_range=None, out_file=None,
 
 # 使用示例
 if __name__ == "__main__":
-    # data_dir = "/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M"
+    # data_dir = "/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M"
     # 数据文件所在目录
-    data_dir = "/home/dell/sjw/lb/simulator/output/aps-v2_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_1024M"
+    data_dir = "/home/dcn1/fxb/simulator/output/aps-v2_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_1024M"
 
     fct_file = data_dir + "/fct.txt"
     # src_id = 511

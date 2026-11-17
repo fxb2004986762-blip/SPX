@@ -26,7 +26,7 @@
 #include <cstdarg>
 #include <thread>
 
-#define LOG_PATH  "/home/dell/sjw/lb/simulator/output/simulation/"
+#define LOG_PATH  "/home/dcn1/fxb/simulator/output/simulation/"
 
 enum class NcclLogLevel { DEBUG, INFO, WARNING,ERROR};
 

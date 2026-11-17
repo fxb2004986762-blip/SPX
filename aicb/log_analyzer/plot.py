@@ -76,8 +76,8 @@ def log_time_plotter(epoch_times: List[float]):
 
 
 if __name__ == "__main__":
-    filename = "/Users/yikaizhu/alicode/models-perf/deepspeed_baichuan_exp/results/baichuan_13B_zero3/55n_915_comm_log.txt"
-    filename = "/Users/yikaizhu/Desktop/AIBC_clean.txt"
+    filename = "/home/dcn1/fxb/simulator/aicb/results/baichuan_13B_zero3/55n_915_comm_log.txt"
+    filename = "/home/dcn1/fxb/simulator/aicb/results/AIBC_clean.txt"
     comm_log = parse_ds_comm_log(filename)
     comm_info = comm_log.analyze()
     if "train" in comm_info:

@@ -189,87 +189,87 @@ def evaluate_and_plot(
 if __name__ == "__main__":
 
     # algo_files = {
-    #     # "aps-v2": "/home/dell/sjw/lb/simulator/output/aps-v2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "aps-v2-c2": "/home/dell/sjw/lb/simulator/output/aps-v2-c2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "aps-v2-c4": "/home/dell/sjw/lb/simulator/output/aps-v2-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     # "aps-v2-c8": "/home/dell/sjw/lb/simulator/output/aps-v2-c8-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     # "aps-v2-eq": "/home/dell/sjw/lb/simulator/output/aps-v2-eq-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "aps-v2-eq-c2": "/home/dell/sjw/lb/simulator/output/aps-v2-eq-c2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "aps-v2-eq-c4": "/home/dell/sjw/lb/simulator/output/aps-v2-eq-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     # "aps-v2-eq-c8": "/home/dell/sjw/lb/simulator/output/aps-v2-eq-c8-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "aps-v2-q-c4": "/home/dell/sjw/lb/simulator/output/aps-v2-q-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "rps": "/home/dell/sjw/lb/simulator/output/rps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
-    #     "ecmp": "/home/dell/sjw/lb/simulator/output/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M"
+    #     # "aps-v2": "/home/dcn1/fxb/simulator/output/aps-v2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "aps-v2-c2": "/home/dcn1/fxb/simulator/output/aps-v2-c2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "aps-v2-c4": "/home/dcn1/fxb/simulator/output/aps-v2-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     # "aps-v2-c8": "/home/dcn1/fxb/simulator/output/aps-v2-c8-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     # "aps-v2-eq": "/home/dcn1/fxb/simulator/output/aps-v2-eq-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "aps-v2-eq-c2": "/home/dcn1/fxb/simulator/output/aps-v2-eq-c2-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "aps-v2-eq-c4": "/home/dcn1/fxb/simulator/output/aps-v2-eq-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     # "aps-v2-eq-c8": "/home/dcn1/fxb/simulator/output/aps-v2-eq-c8-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "aps-v2-q-c4": "/home/dcn1/fxb/simulator/output/aps-v2-q-c4-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "rps": "/home/dcn1/fxb/simulator/output/rps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M",
+    #     "ecmp": "/home/dcn1/fxb/simulator/output/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAllReduce_128g_TP2_256M"
     # }
     # algo_files = {
-    #     "aps-v2-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-f4": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2/aps-v2-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps": "/home/dell/sjw/lb/simulator/output/aps-b64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "rps": "/home/dell/sjw/lb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "ecmp": "/home/dell/sjw/lb/simulator/output/6int-class-full/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "flowbender": "/home/dell/sjw/lb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "letflow": "/home/dell/sjw/lb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+    #     "aps-v2-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-f4": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2/aps-v2-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps": "/home/dcn1/fxb/simulator/output/aps-b64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "rps": "/home/dcn1/fxb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "ecmp": "/home/dcn1/fxb/simulator/output/6int-class-full/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "flowbender": "/home/dcn1/fxb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "letflow": "/home/dcn1/fxb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     # }
     # algo_files = {
-    #     "aps-v2-b0": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b4": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b8": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b16": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b32": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b64": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b0": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b0": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b4": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b8": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b16": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b32": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b64": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b0": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
     # }
     # algo_files = {
-    #     "aps-v2-b0": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b4": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b8": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b16": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b32": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b64": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "aps-v2-b306": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b306_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b0": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b4": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b8": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b16": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b32": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b64": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
-    #     "rps-b306": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b306_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M"
+    #     "aps-v2-b0": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b4": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b8": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b16": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b32": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b64": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "aps-v2-b306": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/aps-v2-b306_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b0": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b4": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b8": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b8_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b16": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b32": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b32_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b64": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M",
+    #     "rps-b306": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M/rps-b306_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g_512M"
     # }
     # algo_files = {
-    #     "aps-v2-b4-8MB": "/home/dell/sjw/lb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_8M",
-    #     "aps-v2-b4-32MB": "/home/dell/sjw/lb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_32M"
+    #     "aps-v2-b4-8MB": "/home/dcn1/fxb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_8M",
+    #     "aps-v2-b4-32MB": "/home/dcn1/fxb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_32M"
     # }
     # algo_files = {
-    #     "aps-v2-qu-f1": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f4": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f8": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f16": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f32": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f32_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f64": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "aps-v2-qu-f306": "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "rps": "/home/dell/sjw/lb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "ecmp": "/home/dell/sjw/lb/simulator/output/6int-class-full/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "flowbender": "/home/dell/sjw/lb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-    #     "letflow": "/home/dell/sjw/lb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+    #     "aps-v2-qu-f1": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f1_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f4": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f4_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f8": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f8_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f16": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f32": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f32_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f64": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "aps-v2-qu-f306": "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-qu/aps-v2-qu-f306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "rps": "/home/dcn1/fxb/simulator/output/6int-class-full/rps/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "ecmp": "/home/dcn1/fxb/simulator/output/6int-class-full/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "flowbender": "/home/dcn1/fxb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+    #     "letflow": "/home/dcn1/fxb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
     # }
 
 
     algo_files = {
-        "aps-v2": "/home/dell/sjw/lb/simulator/output/3lb-class/aps-v2/All-to-All/aps-v2_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
-        "rps": "/home/dell/sjw/lb/simulator/output/3lb-class/rps/All-to-All/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
-        # "aps": "/home/dell/sjw/lb/simulator/output/3lb-class/aps/aps-b64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        "reps": "/home/dell/sjw/lb/simulator/output/3lb-class/reps/reps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
-        "ecmp": "/home/dell/sjw/lb/simulator/output/3lb-class/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
-        # "flowbender": "/home/dell/sjw/lb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        # "letflow": "/home/dell/sjw/lb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps-v2": "/home/dcn1/fxb/simulator/output/3lb-class/aps-v2/All-to-All/aps-v2_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
+        "rps": "/home/dcn1/fxb/simulator/output/3lb-class/rps/All-to-All/rps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
+        # "aps": "/home/dcn1/fxb/simulator/output/3lb-class/aps/aps-b64_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "reps": "/home/dcn1/fxb/simulator/output/3lb-class/reps/reps_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
+        "ecmp": "/home/dcn1/fxb/simulator/output/3lb-class/ecmp/ecmp_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAll2All_1024g_EP8_64M",
+        # "flowbender": "/home/dcn1/fxb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        # "letflow": "/home/dcn1/fxb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
 
     }
-    out_dir = "/home/dell/sjw/lb/simulator/output/1all_figures"
+    out_dir = "/home/dcn1/fxb/simulator/output/1all_figures"
     out_file = out_dir + "/bw_baseline_all2all_8MBpf.txt"
     out_pdf_file = out_dir + "/bw_baseline_all2all_8MBpf.pdf"
 
 
-    # out_dir = "/home/dell/sjw/lb/simulator/output/1all_figures"
+    # out_dir = "/home/dcn1/fxb/simulator/output/1all_figures"
     # out_file = out_dir + "/32MB_nic_bw.txt"
     # out_pdf_file = out_dir + "/32MB_nic_bw.pdf"
 

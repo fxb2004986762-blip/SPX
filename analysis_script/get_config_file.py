@@ -9,12 +9,12 @@ import os
 import shutil
 from pathlib import Path
 
-#     source_directory = "/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+#     source_directory = "/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
 #     files_to_copy = ["fattree_k16_1024g_8gps_400Gbps_A100", "microAllReduce_1024g", "SimAI.conf"]
 
 # ========== 配置区域 ==========
 # 源目录路径
-SOURCE_DIR = "/home/dell/sjw/lb/simulator/output/6int-class-full/aps-v2-u"
+SOURCE_DIR = "/home/dcn1/fxb/simulator/output/6int-class-full/aps-v2-u"
 
 # 要复制的文件列表
 FILES_TO_COPY = [
@@ -212,7 +212,7 @@ if __name__ == "__main__":
 #     # 输入要复制的文件名（用逗号分隔）
 #     # files_input = input("请输入要复制的文件名（用逗号分隔）: ").strip()
 #     # files_to_copy = [f.strip() for f in files_input.split(',')]
-#     source_directory = "/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
+#     source_directory = "/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g"
 #     files_to_copy = ["fattree_k16_1024g_8gps_400Gbps_A100", "microAllReduce_1024g", "SimAI.conf"]
 
     

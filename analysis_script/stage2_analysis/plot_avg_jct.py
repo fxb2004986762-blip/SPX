@@ -280,19 +280,19 @@ if __name__ == '__main__':
     """
 
     algo_files = {
-        "aps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/aps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-        "aps-v2": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/aps-v2-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-        "rps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/rps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-        "reps": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/reps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-        "ecmp": "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
-        # "flowbender": "/home/dell/sjw/lb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
-        # "letflow": "/home/dell/sjw/lb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        "aps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/aps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+        "aps-v2": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/aps-v2-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+        "rps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/rps-b64-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+        "reps": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/reps-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+        "ecmp": "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All/ecmp-asy_dcqcn-fattree_k8_128g_2gps_400Gbps_A100_asy-microAll2All_128g_EP8_8M",
+        # "flowbender": "/home/dcn1/fxb/simulator/output/6int-class-full/flowbender/flowbender_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
+        # "letflow": "/home/dcn1/fxb/simulator/output/6int-class-full/letflow/letflow_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g",
 
     }
 
     jct_data = {}
     throughput_data = {}
-    out_dir = "/home/dell/sjw/lb/simulator/output/8asy_topo/All-to-All"
+    out_dir = "/home/dcn1/fxb/simulator/output/8asy_topo/All-to-All"
     # out_file = out_dir + "/aps-v2-eu_jct_avg_without306.pdf"
     # out_file_throughput = out_dir + "/aps-v2-eu_jct_avg_without306.txt"
     out_file = out_dir + "/jct(avg)_baseline_all2all_1MBpf.pdf"

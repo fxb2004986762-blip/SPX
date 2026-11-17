@@ -163,16 +163,16 @@ def plot_results(stats_dict, output_file='queue_analysis.pdf'):
 if __name__ == "__main__":
     # 示例：处理单个或多个文件
     data_files = {
-        "reps": "/home/dell/sjw/lb/simulator/output/reps_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAll2All_128g_EP8_8M",
-        # "aps-v2-b16": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
-        # "aps-v2-b64": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
-        # "rps-b0": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
-        # "rps-b16": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
-        # "rps-b64": "/home/dell/sjw/lb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
+        "reps": "/home/dcn1/fxb/simulator/output/reps_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAll2All_128g_EP8_8M",
+        # "aps-v2-b16": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/aps-v2-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
+        # "aps-v2-b64": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/aps-v2-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
+        # "rps-b0": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b0_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
+        # "rps-b16": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b16_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
+        # "rps-b64": "/home/dcn1/fxb/simulator/output/5ooo-class/AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g/rps-b64_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAllReduce_1024g",
     }
 
 
-    output_dir = "/home/dell/sjw/lb/simulator/output/reps_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAll2All_128g_EP8_8M"
+    output_dir = "/home/dcn1/fxb/simulator/output/reps_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAll2All_128g_EP8_8M"
     output_file = output_dir + "/qlen.pdf"
     for label, data_file in data_files.items():
         data_files[label] = data_file + "/qlen.txt"

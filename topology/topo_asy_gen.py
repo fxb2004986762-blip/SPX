@@ -116,7 +116,7 @@ def modify_fourth_column(filename, start, end, min_val, max_val,
 #  在此处修改参数
 # ═══════════════════════════════════════════════════════════════
 if __name__ == "__main__":
-    PRIME_FILE_PATH  = "/home/dell/sjw/lb/simulator/topology/SpectrumX_1024g_8gps_400Gbps_A100"   # 原始拓扑文件路径
+    PRIME_FILE_PATH  = "/home/dcn1/fxb/simulator/topology/SpectrumX_1024g_8gps_400Gbps_A100"   # 原始拓扑文件路径
     FILE_PATH = PRIME_FILE_PATH + "_asy"  # 修改后文件路径 _failure _asy
     shutil.copy(PRIME_FILE_PATH, FILE_PATH)
 

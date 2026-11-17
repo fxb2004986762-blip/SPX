@@ -182,15 +182,15 @@ def plot_cdf(file_with_label, output_file):
 if __name__ == '__main__':
 
     cases = {
-        "aps-v2-b4-8MB": "/home/dell/sjw/lb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_8M",
-        "aps-v2-b4-32MB": "/home/dell/sjw/lb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_32M"
+        "aps-v2-b4-8MB": "/home/dcn1/fxb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_8M",
+        "aps-v2-b4-32MB": "/home/dcn1/fxb/simulator/output/aps-v2-b4_dcqcn-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100-microAll2All_1024g_EP8_32M"
     }
     # cases = {
-    #     'aps-v2-fattree-allreduce_512M': '/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/aps-v2-b306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M',
-    #     'rps-fattree-allreduce_512M': '/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M'
+    #     'aps-v2-fattree-allreduce_512M': '/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/aps-v2-b306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M',
+    #     'rps-fattree-allreduce_512M': '/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b306_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M'
     # }    
     # cases = {
-    #     'rps-fattree-allreduce_512M': '/home/dell/sjw/lb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M'
+    #     'rps-fattree-allreduce_512M': '/home/dcn1/fxb/simulator/output/5ooo-class/fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M/rps-b16_dcqcn-fattree_k16_1024g_8gps_400Gbps_A100-microAllReduce_1024g_512M'
     # }    
     cases_list = []
 
@@ -199,8 +199,8 @@ if __name__ == '__main__':
         cases_list.append((fct_data, label))
 
 
-    # output_file = "/home/dell/sjw/lb/simulator/output/1all_figures/fattree-allreduce_128M_ooo_cdf.pdf"
-    output_dir = "/home/dell/sjw/lb/simulator/output/1all_figures"
+    # output_file = "/home/dcn1/fxb/simulator/output/1all_figures/fattree-allreduce_128M_ooo_cdf.pdf"
+    output_dir = "/home/dcn1/fxb/simulator/output/1all_figures"
     output_file = output_dir + "/fct_cdf.pdf"
 
     plot_cdf(cases_list, output_file)

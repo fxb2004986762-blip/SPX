@@ -23,10 +23,10 @@ baseDir="/../output"
 
 
 # 绘图文件
-fctPy="/home/dell/sjw/lb/simulator/analysis_script/plot_fct.py"
-jctPy="/home/dell/sjw/lb/simulator/analysis_script/plot_jct.py"
-oooPy="/home/dell/sjw/lb/simulator/analysis_script/plot_ooo.py"
-fctOooPy="/home/dell/sjw/lb/simulator/analysis_script/plot_fct_ooo.py"
+fctPy="/home/dcn1/fxb/simulator/analysis_script/plot_fct.py"
+jctPy="/home/dcn1/fxb/simulator/analysis_script/plot_jct.py"
+oooPy="/home/dcn1/fxb/simulator/analysis_script/plot_ooo.py"
+fctOooPy="/home/dcn1/fxb/simulator/analysis_script/plot_fct_ooo.py"
 
 modify_Dir
 run

@@ -33,7 +33,7 @@ matplotlib.rcParams["ps.fonttype"] = 42
 # =========================================================
 CONFIG_LIST = {
     # "test-1024GPU": {
-    #     "0": "/home/dell/sjw/lb/simulator/output/12asy_topo/topology_type/hpn/alltoall/ecmp/ecmp_mprdma-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100_asy-microAll2All_1024g_EP8_128M",
+    #     "0": "/home/dcn1/fxb/simulator/output/12asy_topo/topology_type/hpn/alltoall/ecmp/ecmp_mprdma-AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100_asy-microAll2All_1024g_EP8_128M",
     # },
 }
 
