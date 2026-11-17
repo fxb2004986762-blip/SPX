@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# baseDir="/home/dell/sjw/lb/simulator/output/aps-v2-mix-c10_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
+# baseDir_rps="/home/dell/sjw/lb/simulator/output/rps-mix-b306_dcqcn-fattree_k8_128g_2gps_400Gbps_A100-microAllReduce_128g_TP2"
+
+cd $baseDir && 
+# 提取 <src,dst> 路径信息 -> pathID2Switch
+if [ -e "pathID2Switch" ]; then
+    echo "pathID2Switch exists"
+else
+    grep "APS_PATH_SWITCHID" output.log | awk -F ':| |,' '{print $9,$10,$11,$12,$13,$14,$6}' > pathID2Switch 
+fi
+
+cd /home/dell/sjw/lb/simulator/analysis_script &&
+sed -i "s|case_file = .*|case_file = \"$baseDir\"|" topo_parser.py &&
+# 解析 <src,dst> 路径交换机出端口 -> pathID2Switch_with_ports.txt
+python3 topo_parser.py &&
+
+sed -i "s|basePath = .*|basePath = \"$baseDir\"|" plot_pathBw.py &&
+# 1. 获取路径带宽 -> pathBw.txt; 2. 获取路径带宽随时间变化 -> pathBw.pdf
+python3 plot_pathBw.py
