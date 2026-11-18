@@ -59,7 +59,8 @@ class SimAIConfig:
     # ECMP APS run in a mix
     MIX_LB_RATIO: float = 0
     ## 0: ECMP, 1: APS, 2: RPS, 3: FlowBender, 4: LetFlow, 5: REPS, 6: PSN-PATH
-    LB_MODE: int = 0
+    LB_MODE: int = 6
+    PSN_PATH_K: int = 4
     HASH_TYPE: int = 0
     APS_PATH_CREDIT: int = 1 # credit buffer size
     APS_UPDATE_FREQUENCY: int = 1

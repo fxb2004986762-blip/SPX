@@ -360,8 +360,13 @@ def generate(plan_csv: Path, output_root: Path, worklist_path: Path) -> None:
             # conf.update(env_info)    
 
             write_conf(conf_path, conf, baseline)
-            append_worklist(worklist_path, exp_dir, conf["topology"], conf["workload"], env_info)
-
+            append_worklist(
+                worklist_path,
+                exp_dir,
+                env_info["network_file"],
+                env_info["workload_file"],
+                env_info,
+            )
             generated += 1
             print(f"[OK] {exp_id}: Successed, config written to {conf_path}")
 

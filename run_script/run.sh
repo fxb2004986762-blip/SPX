@@ -45,6 +45,11 @@ function configpath {
 
     ## 原始 workload 和 network 文件目录
     workload_file="$simdir/workload/$workload"
+
+    if [ ! -f "$workload_file" ]; then
+    workload_file="$simdir/custom_trace/${workload}.txt"
+    fi
+
     network_file="$simdir/topology/$network"
     if [ -e $workload_file ]; then 
         echo "find workload: $workload_file"
@@ -76,7 +81,7 @@ function configpath {
     cp $simdir/run_script/simai_config.cfg $outdir/SimAI.conf
 
     ## 复制 workload 和 network 文件到 tag 目录
-    cp $workload_file $outdir/
+    cp "$workload_file" "$outdir/$workload"
     cp $network_file $outdir/
 
     return 0
@@ -164,7 +169,7 @@ simdir="/home/dcn1/fxb/simulator"
 # tag="aps-v2_mprdma"
 # tag="aps-v2-o306_dcqcn"
 # tag="aps-v2-o306_mprdma"
-tag="ecmp_dcqcn"
+tag="psn_path_dcqcn"
 # tag="rps_dcqcn"
 # tag="reps_mprdma"
 # tag="reps-symhash_mprdma"
@@ -185,7 +190,7 @@ threads=16
 
 # microAll2All_128g_EP8_8M microAll2All_128g_EP8_32M microAll2All_128g_EP8_64M microAll2All_128g_EP8_128M
 # microAll2All_1024g_EP8_32M
-workload="microAll2All_128g_EP8_8M"
+workload="trace_test"
 
 # Spectrum-X_32g_8gps_400Gbps_A100  
 # AlibabaHPN_1024g_8gps_DualToR_DualPlane_200Gbps_A100

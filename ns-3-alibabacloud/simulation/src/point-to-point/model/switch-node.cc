@@ -440,15 +440,17 @@ int SwitchNode::GetOutDev(Ptr<Packet> p, CustomHeader &ch){
 			case 1:
 				idx = DoLbAPS(p, ch, nexthops); break;
 			case 2:
-				// idx = DoLbRPS(p, ch, nexthops); break;
-				idx = DoLbReps(p, ch, nexthops); break;
+				idx = DoLbRPS(p, ch, nexthops); break;
+				//idx = DoLbReps(p, ch, nexthops); break;
 			case 3:
 				idx = DoLbFlowBender(p, ch, nexthops); break;
 			case 4:
 				if (ch.l3Prot != 0x11) {
 					idx = DoLbECMP(p, ch, nexthops); // LetFlow is only for UDP packets, other packets use ECMP
-				} else
-				return DoLbLetFlow(p, ch, nexthops);
+					break;					
+				} else{
+        			return DoLbLetFlow(p, ch, nexthops);
+				}
 			case 5:
 				idx = DoLbReps(p, ch, nexthops); break;
 			case 6:
