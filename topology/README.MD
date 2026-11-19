@@ -229,6 +229,97 @@ LINK_DOWN <time_us> <node_A> <node_B>
 
 ## 6. 辅助脚本
 
+### Spectrum-X 多平面生成
+
+`../astra-sim-alibabacloud/inputs/topo/gen_Topo_Template.py` 支持
+`-topo Spectrum-X --planes P`。这是在现有 rail-optimized 模型上的多平面扩展：
+
+- GPU 与服务器内部 NVSwitch 只创建一套，每张 GPU 向每个平面各连接一个 Leaf。
+- 每个平面独立创建 Leaf/ASW 和 Spine/PSW，平面内 Leaf—Spine 全连接；
+  不生成不同平面交换机之间的链路。
+- 每个 segment 内，不同服务器中同一位置的 GPU 连接相同 rail 的 Leaf。
+- 拓扑仍使用现有五列链路格式，第二行先列全部 NVSwitch 再列网络交换机。
+  不需要修改 SimAI 文件解析器。
+
+从项目根目录执行以下命令可生成 32 GPU、双平面的例子：
+
+```bash
+cd topology
+python3 ../astra-sim-alibabacloud/inputs/topo/gen_Topo_Template.py \
+  -topo Spectrum-X --planes 2 \
+  -g 32 -gps 8 -gt A100 -nsps 1 \
+  -npa 4 -asn 8 -psn 4 -app 8 \
+  -bw 200Gbps -apbw 200Gbps
+```
+
+文件写入当前目录：
+
+```text
+Spectrum-X_32g_8gps_2planes_200Gbps_A100
+Spectrum-X_32g_8gps_2planes_200Gbps_A100.planes.json
+```
+
+第一个文件用于仿真；JSON 文件仅供查询参数和各平面的 Leaf/Spine 节点 ID，
+不要把 JSON 文件传给 `run.sh -n`。同参数再次生成会覆盖这两个文件。
+
+此例共有 4 台服务器、32 张 GPU、4 个 NVSwitch，
+每个平面有 8 个 Leaf 和 4 个 Spine，拓扑首行为：
+
+```text
+60 8 4 24 160 A100
+```
+
+节点编号：GPU `0–31`，NVSwitch `32–35`，平面 0 Leaf `36–43`、
+Spine `44–47`，平面 1 Leaf `48–55`、Spine `56–59`。
+例如 GPU 0 连接 NVSwitch 32、Leaf 36 和 Leaf 48；GPU 8 也连接这两个 Leaf，
+但属于另一台服务器、连接 NVSwitch 33。
+
+参数语义：
+
+| 参数 | 多平面模式中的含义 |
+| --- | --- |
+| `--planes` | 每张 GPU 接入的独立网络平面数，正整数；仅支持 Spectrum-X |
+| `-g` / `-gps` | 总 GPU 数 / 每服务器 GPU 数；前者必须能被后者整除 |
+| `-nsps` | 每服务器 NVSwitch 数，不随平面数复制 |
+| `-npa` | 每个 Leaf 的 GPU 下联容量，也就是每个 segment 的服务器容量 |
+| `-asn` | 每平面 Leaf 数；按 `ceil(服务器数 / npa) × gps` 自动校正 |
+| `-psn` | 每平面 Spine 数 |
+| `-app` | 每个 Spine 能接入的 Leaf 数上限，不小于每平面的 Leaf 数 |
+| `-bw` | 每条 GPU—Leaf 链路带宽 |
+| `-apbw` | 每条 Leaf—Spine 链路带宽 |
+
+若用 `G` 表示 GPU 数、`N` 表示 NVSwitch 总数、`V` 表示每服务器 NVSwitch 数、
+`L/S` 表示每平面 Leaf/Spine 数、`P` 表示平面数，则：
+
+```text
+总节点 = G + N + P × (L + S)
+总链路 = G × V + P × (G + L × S)
+```
+
+**带宽不会自动除以平面数。** 两平面 `-bw 200Gbps` 表示每 GPU 两条 200 Gbps
+网络链路，总接入带宽为 400 Gbps；两平面 `-bw 400Gbps` 则为总计 800 Gbps。
+比较固定总带宽的实验时，需要自行选择 `-bw`、`-apbw` 和 Spine 数，使上下行预算一致。
+
+运行时在 `run_script/` 下使用生成文件名，例如：
+
+```bash
+./run.sh -r -n Spectrum-X_32g_8gps_2planes_200Gbps_A100 -tg spectrum_2plane_test
+```
+
+需确认实际 `FLOW_FILE` 中的端节点都在 `0–31`。新功能只扩展拓扑生成，
+不会修改 `run.sh` 的 workload 设置、`FLOW_FILE` 或 RDMA 发送策略。
+多平面在拓扑上可达不等于某一负载均衡算法会实际利用全部平面；
+跨平面选路还取决于端侧出接口选择和路由实现，需另行检查端口流量。
+
+不传 `--planes` 或传 `--planes 1` 时，原 Spectrum-X 单平面生成行为和文件名保持不变。
+HPN 双平面仍使用 `-topo AlibabaHPN --dp`；Spectrum-X 多平面不与 `--dp/--dt` 混用。
+
+结构测试（从项目根目录执行，无需编译仿真器）：
+
+```bash
+python3 -m unittest discover -s astra-sim-alibabacloud/inputs/topo -p 'test_*.py' -v
+```
+
 ### `fat-tree.py`
 
 生成带 NVSwitch 的 Fat-Tree 拓扑，节点编号顺序为 GPU、NVSwitch、ToR、Aggregation、Core。示例：

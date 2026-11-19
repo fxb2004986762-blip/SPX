@@ -1,0 +1,146 @@
+{
+  "topology_file": "Spectrum-X_32g_8gps_4planes_200Gbps_A100",
+  "model": "shared GPU/NVSwitch, independent rail-optimized planes",
+  "parameters": {
+    "topology": "Spectrum-X",
+    "rail_optimized": true,
+    "dual_ToR": false,
+    "dual_plane": false,
+    "planes": 4,
+    "gpu": 32,
+    "k": 4,
+    "error_rate": 0,
+    "gpu_per_server": 8,
+    "gpu_type": "A100",
+    "nv_switch_per_server": 1,
+    "nvlink_bw": "2880Gbps",
+    "nv_latency": "0.000025ms",
+    "latency": "0.0005ms",
+    "bandwidth": "200Gbps",
+    "asw_switch_num": 8,
+    "nics_per_aswitch": 4,
+    "psw_switch_num": 4,
+    "ap_bandwidth": "200Gbps",
+    "asw_per_psw": 8
+  },
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "nvswitch_ids": [
+    32,
+    33,
+    34,
+    35
+  ],
+  "segments_per_plane": 1,
+  "planes": [
+    {
+      "plane": 0,
+      "leaf_ids": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "spine_ids": [
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "plane": 1,
+      "leaf_ids": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "spine_ids": [
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "plane": 2,
+      "leaf_ids": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "spine_ids": [
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    {
+      "plane": 3,
+      "leaf_ids": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "spine_ids": [
+        80,
+        81,
+        82,
+        83
+      ]
+    }
+  ],
+  "gpu_leaf_rule": "leaf_ids[(gpu_id // gpu_per_server // nics_per_aswitch) * gpu_per_server + gpu_id % gpu_per_server]"
+}

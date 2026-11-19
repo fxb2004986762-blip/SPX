@@ -4,7 +4,108 @@ Users can freely customize the topology according to their needs。
 """
 
 import argparse
+import json
 import warnings
+
+def SpectrumX_MultiPlane(parameters):
+    """Shared GPU/NVSwitch nodes with independent rail-optimized fabrics.
+
+    ASW/PSW counts and capacities are per plane. Bandwidth is per link;
+    no implicit division of bandwidth between planes is performed.
+    """
+    #检查输入参数是否正确
+    for key in ('planes', 'gpu', 'gpu_per_server', 'nv_switch_per_server',
+                'nics_per_aswitch', 'psw_switch_num', 'asw_per_psw',
+                'asw_switch_num'):
+        if parameters[key] <= 0:
+            raise ValueError(f"{key} must be positive")
+    #计算服务器和 Leaf 的数量
+    gpu_count = parameters['gpu']
+    gps = parameters['gpu_per_server']
+    if gpu_count % gps:
+        raise ValueError("gpu must be divisible by gpu_per_server")
+    planes = parameters['planes']
+    server_count = gpu_count // gps
+    servers_per_segment = parameters['nics_per_aswitch']
+    segments = (server_count + servers_per_segment - 1) // servers_per_segment
+    leaves_per_plane = segments * gps
+    spines_per_plane = parameters['psw_switch_num']
+    if leaves_per_plane > parameters['asw_per_psw']:
+        raise ValueError("Leaf count per plane exceeds asw_per_psw (one Pod capacity)")
+    if parameters['asw_switch_num'] != leaves_per_plane:
+        warnings.warn(f"Setting asw_switch_num to {leaves_per_plane} per plane "
+                      "to match GPU/rail layout")
+    #计算整个网络的节点数量和链路数量
+    nv_per_server = parameters['nv_switch_per_server']
+    nv_count = server_count * nv_per_server
+    switch_count = planes * (leaves_per_plane + spines_per_plane)
+    node_count = gpu_count + nv_count + switch_count
+    link_count = gpu_count * nv_per_server + planes * (
+        gpu_count + leaves_per_plane * spines_per_plane)
+    file_name = (f"Spectrum-X_{gpu_count}g_{gps}gps_{planes}planes_"
+                 f"{parameters['bandwidth']}_{parameters['gpu_type']}")
+
+    # GPU -> all NVSwitches -> (Leaf, Spine) for each plane.
+    # SetupNetwork requires NVSwitch IDs first on the second line.
+    #给所有交换机分配节点 ID
+    plane_layout = []
+    for plane in range(planes):
+        leaf_start = gpu_count + nv_count + plane * (
+            leaves_per_plane + spines_per_plane)
+        spine_start = leaf_start + leaves_per_plane
+        plane_layout.append({
+            'plane': plane,
+            'leaf_ids': list(range(leaf_start, spine_start)),
+            'spine_ids': list(range(spine_start, spine_start + spines_per_plane)),
+        })
+    #生成拓扑文件
+    with open(file_name, 'w') as f:
+        f.write(f"{node_count} {gps} {nv_count} {switch_count} "
+                f"{link_count} {parameters['gpu_type']}\n")
+        f.write(' '.join(str(i) for i in range(gpu_count, node_count)) + '\n')
+
+        def write_link(src, dst, bandwidth, latency):
+            f.write(f"{src} {dst} {bandwidth} {latency} {parameters['error_rate']}\n")
+    #真正建立网络连接
+        # Scale-up links are shared; never duplicate them for each plane.
+        for gpu in range(gpu_count):
+            nv_start = gpu_count + (gpu // gps) * nv_per_server
+            for nv in range(nv_start, nv_start + nv_per_server):
+                write_link(gpu, nv, parameters['nvlink_bw'], parameters['nv_latency'])
+
+        for layout in plane_layout:
+            for gpu in range(gpu_count):
+                segment = (gpu // gps) // servers_per_segment
+                rail = gpu % gps
+                leaf = layout['leaf_ids'][segment * gps + rail]
+                write_link(gpu, leaf, parameters['bandwidth'], parameters['latency'])
+            for leaf in layout['leaf_ids']:
+                for spine in layout['spine_ids']:
+                    write_link(leaf, spine, parameters['ap_bandwidth'], parameters['latency'])
+
+    # 生成 planes.json 文件
+    metadata = {
+        'topology_file': file_name,
+        'model': 'shared GPU/NVSwitch, independent rail-optimized planes',
+        'parameters': dict(parameters, asw_switch_num=leaves_per_plane),
+        'gpu_ids': list(range(gpu_count)),
+        'nvswitch_ids': list(range(gpu_count, gpu_count + nv_count)),
+        'segments_per_plane': segments,
+        'planes': plane_layout,
+        'gpu_leaf_rule': 'leaf_ids[(gpu_id // gpu_per_server // nics_per_aswitch) '
+                         '* gpu_per_server + gpu_id % gpu_per_server]',
+    }
+    with open(file_name + '.planes.json', 'w') as f:
+        json.dump(metadata, f, indent=2)
+        f.write('\n')
+    print(f"Created {file_name}: {planes} planes, {gpu_count} GPUs, "
+          f"{leaves_per_plane} Leaf + {spines_per_plane} Spine per plane, "
+          f"{node_count} nodes, {link_count} links")
+    print(f"Each GPU has {planes} network links at {parameters['bandwidth']} each; "
+          "bandwidth is not split automatically.")
+    print(f"Plane/node mapping: {file_name}.planes.json")
+    return file_name
+
 
 def Rail_Opti_SingleToR(parameters):
     nodes_per_asw = parameters['nics_per_aswitch']
@@ -555,6 +656,9 @@ def main():
     parser.add_argument('--ro', action='store_true',help='use rail-optimized structure')
     parser.add_argument('--dt',action='store_true', help='enable dual ToR, only for DCN+')
     parser.add_argument('--dp', action='store_true', help='enable dual_plane, only for AlibabaHPN')
+    parser.add_argument('--planes', type=int, default=None,
+                        help='Spectrum-X only: independent network planes per GPU (default 1). '
+                             'ASW/PSW counts and capacities are per plane; bandwidth is per link')
     parser.add_argument('-g','--gpu',type=int,default=None,help='gpus num, default 32')
     parser.add_argument('-er','--error_rate',type=str,default=None,help='error_rate, default 0')
     #Intra-Host Parameters:
@@ -574,9 +678,22 @@ def main():
     parser.add_argument('-app','--asw_per_psw',type=int,default=None,help='asw for psw')
     args = parser.parse_args()
 
+    if args.planes is not None:
+        if args.topology != 'Spectrum-X':
+            parser.error('--planes is only supported for Spectrum-X; HPN uses --dp')
+        if args.planes < 1:
+            parser.error('--planes must be at least 1')
+        if args.planes > 1 and (args.dp or args.dt):
+            parser.error('Spectrum-X --planes cannot be combined with --dp or --dt')
+
     default_parameters = []
     parameters = analysis_template(args, default_parameters)
-    if parameters['topology'] == 'Fat_tree':
+    if parameters['topology'] == 'Spectrum-X' and parameters['planes'] > 1:
+        try:
+            SpectrumX_MultiPlane(parameters)
+        except ValueError as exc:
+            parser.error(str(exc))
+    elif parameters['topology'] == 'Fat_tree':
         Fat_tree_topu(parameters)
     elif not parameters['rail_optimized']:
         if parameters['dual_plane']:
@@ -609,6 +726,7 @@ def analysis_template(args, default_parameters):
     parameters['rail_optimized'] = bool(args.ro)
     parameters['dual_ToR'] = bool(args.dt)
     parameters['dual_plane'] = bool(args.dp)
+    parameters['planes'] = getattr(args, 'planes', None) or 1
 
     
     if parameters['topology'] == 'Spectrum-X':
